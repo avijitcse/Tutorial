@@ -21,24 +21,5 @@ app.controller('TestCtrl', ['appName', function TestCtrl(appName) {
 ```
 
 ```js
-// Storing a single value
-var app = angular.module('myApp', []);
-
-app.value('usersOnline', 0);
-
-// Now we inject our constant value into a test controller
-app.controller('TestCtrl', ['usersOnline', function TestCtrl(usersOnline) {
-    console.log(usersOnline);
-    usersOnline = 15;
-    console.log(usersOnline);
-}]);
-var app = angular.module('app', []);
-
-app.value('greeting', 'Hello');
-
-app.config(function ($provide) {
-    $provide.decorator('greeting', function ($delegate) {
-        return $delegate + ' World!';
-    });
-});
+<script async src="//jsfiddle.net/anandmanisankar/jd86qerb/embed/js,html,css,result/dark/"></script>
 ```
