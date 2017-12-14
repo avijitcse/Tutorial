@@ -19,8 +19,8 @@ app.controller('TestCtrl', ['appName', function TestCtrl(appName) {
     console.log(appName);
 }]);
 ```
-asd
-```
+
+```js
 // Storing a single value
 var app = angular.module('myApp', []);
 
@@ -32,4 +32,13 @@ app.controller('TestCtrl', ['usersOnline', function TestCtrl(usersOnline) {
     usersOnline = 15;
     console.log(usersOnline);
 }]);
+var app = angular.module('app', []);
+
+app.value('greeting', 'Hello');
+
+app.config(function ($provide) {
+    $provide.decorator('greeting', function ($delegate) {
+        return $delegate + ' World!';
+    });
+});
 ```
