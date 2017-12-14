@@ -7,25 +7,27 @@
 | Value can only be used during run phase | it can be used in run phse as well as configuration function |
 
 Angular value and constant services are an ideal way to provide application wide access to shared data without having to pollute the global namespace
+
 ```js
 // Storing a single constant value
-var app = angular.module(‘myApp’, []);
+var app = angular.module('myApp', []);
 
-app.constant(‘appName’, ‘My App’);
+app.constant('appName', 'My App');
 
 // Now we inject our constant value into a test controller
-app.controller(‘TestCtrl’, [‘appName’, function TestCtrl(appName) {
+app.controller('TestCtrl', ['appName', function TestCtrl(appName) {
     console.log(appName);
 }]);
 ```
+asd
 ```
 // Storing a single value
-var app = angular.module(‘myApp’, []);
+var app = angular.module('myApp', []);
 
-app.value(‘usersOnline’, 0);
+app.value('usersOnline', 0);
 
 // Now we inject our constant value into a test controller
-app.controller(‘TestCtrl’, [‘usersOnline’, function TestCtrl(usersOnline) {
+app.controller('TestCtrl', ['usersOnline', function TestCtrl(usersOnline) {
     console.log(usersOnline);
     usersOnline = 15;
     console.log(usersOnline);
