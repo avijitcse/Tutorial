@@ -19,5 +19,48 @@ app.controller('TestCtrl', ['appName', function TestCtrl(appName) {
     console.log(appName);
 }]);
 ```
+
+```js
+//Some other module
+var otherModule = angular.module('OtherModule',[]);
+
+// Othermodule has a GreetingService
+otherModule.service('GreetingService', function(){
+    this.sayGreeting = function() {
+        return "Hello";
+    };
+});
+
+// MyApp depends on OtherModule
+var myApp = angular.module('MyApp', ['OtherModule']);
+
+// MyApp is being configured with $provide injected
+myApp.config(function($provide) {
+   
+    // Service instance from OtherModule is injected as $delegate
+    $provide.decorator('GreetingService', function($delegate){
+        var originalGreeting = $delegate.sayGreeting();
+        
+        $delegate.sayGreeting = function() {
+            return originalGreeting + " World!";
+        };
+       
+        // Don't forget to return enhanced $delegate
+        return $delegate;
+    });
+});
+
+// The injected GreetingService in this module will be the decorated service
+myApp.controller("MyController", function($scope, GreetingService){
+    $scope.service = GreetingService;
+});
+```
+```html
+<body ng-app="MyApp" ng-controller="MyController">
+    {{service.sayGreeting()}}
+    <br/>
+    {{service.sayGoodbye()}}
+</body>
+```
 [Demo](http://jsfiddle.net/anandmanisankar/jd86qerb/)
 
