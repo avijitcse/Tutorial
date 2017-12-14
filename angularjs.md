@@ -2,7 +2,8 @@
 -------------------------
 | Value      | Constant | 
 |------------|----------|
-| Constant   | Yes      | 
+| you can not inject ```value()``` into 
+a module ```config()``` function   | Yes      | 
 |            |          |
 |Value       | Yes      | 
 | Service    | Yes      |
