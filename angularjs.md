@@ -1,1 +1,4 @@
-What is the difference between constant and var in angularJS?
+#What is the difference between constant and var in angularJS?
+```js
+some javascript
+```
