@@ -19,7 +19,7 @@ app.controller('TestCtrl', ['appName', function TestCtrl(appName) {
     console.log(appName);
 }]);
 ```
-
+[Example](http://jsfiddle.net/anandmanisankar/jd86qerb/embed/js,html,css,result/dark/)
 ```js
 <script async src="//jsfiddle.net/anandmanisankar/jd86qerb/embed/js,html,css,result/dark/"></script>
 ```
