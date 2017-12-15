@@ -1,4 +1,4 @@
-# What is the difference between constant and var in angularJS?
+## What is the difference between constant and var in angularJS?
 
 | Value      | Constant | 
 |------------|----------|
@@ -64,7 +64,7 @@ myApp.controller("MyController", function($scope, GreetingService){
 ```
 [Demo](http://jsfiddle.net/anandmanisankar/jd86qerb/)
 
-# What is decorator and how to use it?
+## What is decorator and how to use it?
 
 A good use case of ```$provide.decorator``` is when you need to do minor "tweak" on some third-party/upstream service, on which your module depends, while leaving the service intact (because you are not the owner/maintainer of the service). Here is a demonstration on [plunkr](https://plnkr.co/edit/lj9srM2KXZmwmTxLb1p7?p=preview).
 
