@@ -1,5 +1,4 @@
 ## What is the difference between constant and var in angularJS?
-
 | Value      | Constant | 
 |------------|----------|
 | ```value()``` can not be injected into a module ```config()``` function   | ```constant()``` can be injected anywhere in the application as well as module ```config()``` function also| 
@@ -68,6 +67,6 @@ myApp.controller("MyController", function($scope, GreetingService){
 
 A good use case of ```$provide.decorator``` is when you need to do minor "tweak" on some third-party/upstream service, on which your module depends, while leaving the service intact (because you are not the owner/maintainer of the service). Here is a demonstration on [plunkr](https://plnkr.co/edit/lj9srM2KXZmwmTxLb1p7?p=preview).
 
-# What is the difference between Service and Factory
+## What is the difference between Service and Factory
 
 The difference between a factory and a service is that a factory injects a plain function so AngularJS will call the function and a service injects a constructor. A constructor creates a new object so new is called on a service and with a factory you can let the function return anything you want.
